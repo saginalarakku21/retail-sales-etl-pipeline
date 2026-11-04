@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "retail-sales-etl"
+version = "1.0.0"
+description = "Idempotent retail sales ETL pipeline with PostgreSQL and data quality checks"
+requires-python = ">=3.11"
+dependencies = ["pandas>=2.1,<3", "SQLAlchemy>=2.0,<3", "psycopg[binary]>=3.1,<4", "python-dotenv>=1,<2"]
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.6,<1"]
+[project.scripts]
+retail-etl = "retail_etl.cli:main"
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+[tool.ruff]
+line-length = 100
