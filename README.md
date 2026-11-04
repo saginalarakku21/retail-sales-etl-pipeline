@@ -1,5 +1,9 @@
 # Retail Sales ETL Pipeline
 
+📘 **New to this project? Start with the [visual step-by-step guide](docs/visual-guide.md)** — diagrams, examples, setup commands, troubleshooting, and interview explanation.
+
+![Pipeline architecture](docs/images/architecture.svg)
+
 Portfolio-ready Python + SQL pipeline: CSV ingestion → Pandas validation and deduplication → PostgreSQL transactional upsert → SQL analytics.
 
 ## Stack
